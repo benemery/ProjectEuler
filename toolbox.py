@@ -17,3 +17,8 @@ def largest_prime_divisor(n):
     # we have continually set n to the largest of two divisors, what remains
     # is the largest divisor, which has no other divisors, and is therefore prime!
     return n
+
+def is_palindrome(n):
+    """ Is a given int (or string) a palindrome? """
+    n = str(n)
+    return n == n[::-1]
