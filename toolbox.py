@@ -18,6 +18,19 @@ def largest_prime_divisor(n):
     # is the largest divisor, which has no other divisors, and is therefore prime!
     return n
 
+def prime_factors(n):
+    """ Returns all the prime factors of a positive integer """
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d == 0:  # test for divisor
+            factors.append(d)
+            n /= d  # by reducing our target, we are removing multiples of d (ensuring d is prime)
+        d = d + 1
+
+    return factors
+
+
 def is_palindrome(n):
     """ Is a given int (or string) a palindrome? """
     n = str(n)
