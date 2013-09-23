@@ -1,4 +1,4 @@
-from itertools import takewhile
+from math import sqrt
 
 def fib():
     """ Returns a generator for the Fibonacci numbers """
@@ -17,6 +17,11 @@ def largest_prime_divisor(n):
     # we have continually set n to the largest of two divisors, what remains
     # is the largest divisor, which has no other divisors, and is therefore prime!
     return n
+
+def factors(n):
+    """ Returns all factors of n """
+    return set(reduce(list.__add__,
+                ([i, n//i] for i in range(1, int(sqrt(n)) + 1) if n % i == 0)))
 
 def prime_factors(n):
     """ Returns all the prime factors of a positive integer """
@@ -70,3 +75,13 @@ def gen_primes():
             del D[q]
 
         q += 1
+
+
+def gen_triangular():
+    """ Generate an infinte sequence of triangular numbers.
+    """
+    iteration = 2
+    triangular = 1
+    while True:
+        yield triangular
+        triangular, iteration = triangular + iteration, iteration+1
