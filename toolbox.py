@@ -1,4 +1,8 @@
-from math import sqrt
+from math import sqrt, factorial as f
+
+def nCr(n, r):
+    """ n choose r """
+    return f(n) / (f(r) * f(n-r))
 
 def fib():
     """ Returns a generator for the Fibonacci numbers """

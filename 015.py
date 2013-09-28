@@ -1,15 +1,16 @@
-from toolbox import gen_triangular, factors
+from toolbox import nCr
 
-def triangular_with_more_than_n_divisors(n):
-    for t in gen_triangular():
-        if len(factors(t)) > n:
-            return t
+def lattice_paths(x, y):
+    # we need to take x+y steps to reach one corner of the lattice to the other.
+    # if we took x+y steps horizontally we'd be pretty off target.
+    # thus we need to choose y steps to flip to being vertical.
+    return nCr(x+y,y)
 
 def test():
-    return triangular_with_more_than_n_divisors(5) == 28
+    return lattice_paths(2, 2) == 6
 
 def main():
-    return triangular_with_more_than_n_divisors(500)
+    return lattice_paths(20, 20
 
 if __name__ == '__main__':
     print "Passes test? ", test()
