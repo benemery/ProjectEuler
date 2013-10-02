@@ -24,8 +24,17 @@ def largest_prime_divisor(n):
 
 def factors(n):
     """ Returns all factors of n """
+    if n == 0 or n == 1:
+        return set([n])
+
     return set(reduce(list.__add__,
                 ([i, n//i] for i in range(1, int(sqrt(n)) + 1) if n % i == 0)))
+
+def proper_factors(n):
+    """ Proper factors are factors below n """
+    factors_tmp = list(factors(n))
+    factors_tmp.remove(max(factors_tmp))
+    return factors_tmp
 
 def prime_factors(n):
     """ Returns all the prime factors of a positive integer """
