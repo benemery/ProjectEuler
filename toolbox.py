@@ -8,8 +8,8 @@ def fib():
     """ Returns a generator for the Fibonacci numbers """
     first, second = 0, 1
     while True:
-        yield first
         first, second = first + second, first
+        yield first
 
 def largest_prime_divisor(n):
     """ Find the largest prime divisor of a number """
