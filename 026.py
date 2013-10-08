@@ -1,38 +1,37 @@
 from toolbox import is_prime
 
-def cycle_length(n):
-    ''' Taken straight from wikipedia,
-
-        "A fraction in lowest terms with a prime denominator other than 2 or 5
-        (i.e. coprime to 10) always produces a repeating decimal."
-    '''
-    # First ensure that our denominator is coprime to 10
-    while n % 2 == 0:
-        n //= 2
-    while n % 5 == 0:
-        n //= 5
-
-    # Now check which (if any) power of 10 reveals the cycle
-    for x in range(1, n):
-        if (10**x - 1) % n == 0:
-            return x
-    return 0
-
 def longest_cycle(n):
-    ''' Quite brute forcey..
-        Find all the cycle lengths, take the biggest.
+    ''' We only need to test primes as any other composite will have the same
+        cycle length.
 
-        I think this can be improved..
-        http://en.wikipedia.org/wiki/Repeating_decimal#Fractions_with_prime_denominators
+        We're searching for a Full Reptend Prime
+        http://mathworld.wolfram.com/FullReptendPrime.html
+
+        So we want to find the largest FRP below n (so we can start at n and
+        work backwards).
     '''
-    answer = 0
-    test = 0
-    for i in range(1, n):
-        if cycle_length(i) > test:
-            test = cycle_length(i)
-            answer = i
+    # We can speed this up by only looking at odd numbers
+    if n % 2 == 0:
+        n -= 1
 
-    return answer
+    for p in range(n, 1, -2):
+        if not is_prime(p):
+            # not prime, ignore
+            continue
+
+        # now, increase powers of 10 and see if we have a FRP
+        # Note: we need to find the minimum value of k that this holds for, we
+        #   can't simply check pow(10, p-1)
+        k = 1
+        while pow(10, k) % p != 1:
+            k += 1
+
+        if p-k == 1:
+            # Found a FRP!
+            break
+    return p
+
+
 
 def test():
     return longest_cycle(10) == 7

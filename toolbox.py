@@ -89,6 +89,22 @@ def gen_primes():
 
         q += 1
 
+def is_prime(n):
+    """ Test for primility.
+        Limit is set as such as the sqrt(n) is the largest divisor pair
+        (larger divisors will have partner below sqrt(n)).
+    """
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+
+    lim = int(sqrt(n))+1
+    for i in xrange(3, lim, 2):   # only odd numbers
+        if n % i == 0:
+            return False
+    return True
+
 
 def gen_triangular():
     """ Generate an infinte sequence of triangular numbers.
@@ -98,3 +114,22 @@ def gen_triangular():
     while True:
         yield triangular
         triangular, iteration = triangular + iteration, iteration+1
+
+
+def cycle_length(n):
+    ''' Taken straight from wikipedia,
+
+        "A fraction in lowest terms with a prime denominator other than 2 or 5
+        (i.e. coprime to 10) always produces a repeating decimal."
+    '''
+    # First ensure that our denominator is coprime to 10
+    while n % 2 == 0:
+        n /= 2
+    while n % 5 == 0:
+        n /= 5
+
+    # Now check which (if any) power of 10 reveals the cycle
+    for x in range(1, n):
+        if (10**x - 1) % n == 0:
+            return x
+    return 0
