@@ -89,6 +89,18 @@ def gen_primes():
 
         q += 1
 
+def get_primes(n):
+    """ Helper function to get all the primes below n.
+        Fine if you're dealing with a low n, otherwise you may want to watch mem
+        usage.
+    """
+    primes = []
+    for p in gen_primes():
+        if p > n:
+            break
+        primes.append(p)
+    return primes
+
 def is_prime(n):
     """ Test for primility.
         Limit is set as such as the sqrt(n) is the largest divisor pair
