@@ -55,6 +55,28 @@ def is_palindrome(n):
     return n == n[::-1]
 
 
+def is_pandigital(n, start=1, end=10):
+    tests = map(lambda x: str(x), set(range(start, end)))
+    n = str(n)
+
+    if len(n) != len(tests):
+        return False
+
+    if not has_unique_digits(n):
+        return False
+
+    for digit in n:
+        if digit in tests:
+            tests.remove(digit)
+        else:
+            return False
+    return len(tests) == 0
+
+
+def has_unique_digits(n):
+    return len(set(str(n))) == len(str(n))
+
+
 # Sieve of Eratosthenes
 # Code by David Eppstein, UC Irvine, 28 Feb 2002
 # http://code.activestate.com/recipes/117119/
