@@ -5,13 +5,10 @@ def sum_of_digits_to_power(n):
     nums = []
     # the max that we can reach is 9^n * the number of digits
     i = 1
-    lim = 0
-    while True:
-        if pow(9, n) * i > pow(10, i):
-            i += 1
-        else:
-            break
-    lim = pow(9, n) * i
+    lim = pow(9, n)
+    while lim * i > pow(10, i):
+        i += 1
+    lim *= i
 
     # keep a map of all the powers so we're not repeating expensive operations
     pows = {}
