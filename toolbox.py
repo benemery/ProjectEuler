@@ -81,8 +81,7 @@ def has_unique_digits(n):
 # Code by David Eppstein, UC Irvine, 28 Feb 2002
 # http://code.activestate.com/recipes/117119/
 def gen_primes():
-    """ Generate an infinite sequence of prime numbers.
-    """
+    """ Generate an infinite sequence of prime numbers. """
     # Maps composites to primes witnessing their compositeness.
     # This is memory efficient, as the sieve is not "run forward"
     # indefinitely, but only as long as required by the current
@@ -132,6 +131,8 @@ def is_prime(n):
         return False
     if n == 2:
         return True
+    if n % 2 == 0:
+        return False
 
     lim = int(sqrt(n))+1
     for i in xrange(3, lim, 2):   # only odd numbers
@@ -139,10 +140,24 @@ def is_prime(n):
             return False
     return True
 
+def is_cyclic_prime(n):
+    n = str(n)
+    # check if any digit is even, if so don't bother with anything else
+    for d in n:
+        if int(d) % 2 == 0:
+            return n == '2'
+
+    cycles = [[n[i - j] for i in range(len(n))] for j in range(len(n))]
+    # join the digits and convert to ints
+    cycles = map(lambda x: int(''.join(x)), cycles)
+    for p in cycles:
+        if not is_prime(p):
+            return False
+    return True
+
 
 def gen_triangular():
-    """ Generate an infinte sequence of triangular numbers.
-    """
+    """ Generate an infinte sequence of triangular numbers. """
     iteration = 2
     triangular = 1
     while True:
