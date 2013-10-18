@@ -55,8 +55,8 @@ def is_palindrome(n):
     return n == n[::-1]
 
 
-def is_pandigital(n, start=1, end=10):
-    tests = map(lambda x: str(x), set(range(start, end)))
+def is_pandigital(n, start=1, end=9):
+    tests = map(str, range(start, end + 1))
     n = str(n)
 
     if len(n) != len(tests):
