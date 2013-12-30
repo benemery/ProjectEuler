@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import is_palindrome
 
 def is_palindromic_in_2_bases(n):

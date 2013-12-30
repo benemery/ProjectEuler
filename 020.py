@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from math import factorial as f
 
 def sum_factorial(n):

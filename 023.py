@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import factors
 
 def test():

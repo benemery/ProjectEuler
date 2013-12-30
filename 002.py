@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import fib
 from itertools import takewhile
 

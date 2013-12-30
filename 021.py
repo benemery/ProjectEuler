@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import proper_factors, factors
 
 def d(n):

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import prime_factors
 from collections import defaultdict, Counter
 

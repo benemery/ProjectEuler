@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from fractions import Fraction
 
 def cancels_unusually(n , d):

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def number_to_words(n):
     digits = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
         'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen',

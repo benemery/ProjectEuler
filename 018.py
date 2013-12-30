@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def find_max_path_sum(triangle):
     # first convert the triangle into a list of lists
     triangle = map(lambda row: map(int, row.split(' ')), triangle.split('\n'))

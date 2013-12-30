@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def test():
     # no test
     return True

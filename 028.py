@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def sum_spirals(n):
     """ We're summing the corners of a n * n spiral where n is odd
     """

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def sum_square_difference_for_range(x, y):
     nums = range(x, y + 1)
     return sum(nums) * sum(nums) - sum(map(lambda x: x*x, nums))

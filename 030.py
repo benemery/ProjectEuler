@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def sum_of_digits_to_power(n):
     ''' Find (and sum) the numbers which can be written as the sum of their
         digits to power n.

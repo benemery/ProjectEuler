@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def distinct_terms(lim_a, lim_b):
     # By using a set we already only keep distinct terms
     terms = set()

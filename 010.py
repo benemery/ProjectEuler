@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import gen_primes
 
 def sum_primes_below(n):

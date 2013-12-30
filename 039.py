@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from math import sqrt
 
 def number_of_integer_right_triangles(p):

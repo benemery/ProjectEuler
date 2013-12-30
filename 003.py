@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import largest_prime_divisor
 
 def test():

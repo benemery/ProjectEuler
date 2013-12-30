@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import gen_primes, is_pandigital
 from math import log10
 

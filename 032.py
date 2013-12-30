@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import is_pandigital, has_unique_digits
 
 def test():

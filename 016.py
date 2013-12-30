@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def sum_digits(n, power):
     return sum(map(int, list(str(pow(n, power)))))
 

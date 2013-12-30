@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def gen_collatz(n):
     while n > 1:
         yield n

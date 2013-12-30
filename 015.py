@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import nCr
 
 def lattice_paths(x, y):

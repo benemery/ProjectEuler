@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import datetime
 
 def count_sundays(start_date, end_date):

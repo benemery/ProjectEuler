@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import fib
 
 def first_fib_of_length_n(n):

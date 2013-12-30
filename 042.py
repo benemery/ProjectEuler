@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import gen_triangular
 
 def convert_string_to_int(a_string):

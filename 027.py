@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import is_prime, get_primes
 
 def number_of_consecutive_primes(a, b):

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def test():
     # Test is pretty poor
     return True

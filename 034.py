@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from math import factorial as f
 
 # Let's cache all the factorials we know we'll be using

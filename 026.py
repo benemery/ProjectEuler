@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from toolbox import is_prime
 
 def longest_cycle(n):
