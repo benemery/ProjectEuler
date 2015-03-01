@@ -1,4 +1,12 @@
 from math import sqrt, factorial as f
+import os
+
+def get_data(filename):
+    current_dir = os.path.dirname(__file__)
+    path = os.path.join(current_dir, filename)
+    with open(path, 'rb') as fin:
+        data = fin.read()
+    return data
 
 def nCr(n, r):
     """ n choose r """

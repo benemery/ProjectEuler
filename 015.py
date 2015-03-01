@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import nCr
+from ProjectEuler.toolbox import nCr
 
 def lattice_paths(x, y):
     # we need to take x+y steps to reach one corner of the lattice to the other.
@@ -11,7 +11,7 @@ def test():
     return lattice_paths(2, 2) == 6
 
 def main():
-    return lattice_paths(20, 20
+    return lattice_paths(20, 20)
 
 if __name__ == '__main__':
     print "Passes test? ", test()

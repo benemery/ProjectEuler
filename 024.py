@@ -7,7 +7,7 @@ def test():
 def main():
     for i, p in enumerate(permutations('0123456789')):
         if i == 1e6 - 1:
-            return ''.join(p)
+            return int(''.join(p))
 
 
 if __name__ == '__main__':

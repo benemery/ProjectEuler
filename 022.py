@@ -1,10 +1,12 @@
 #!/usr/bin/python
+from toolbox import get_data
+
 def test():
     # Test is pretty poor
     return True
 
 def main():
-    names = open('022_names.txt', 'r').read()
+    names = get_data('022_names.txt')
     # turn to a list of names
     names = names.replace('"', '').split(',')
     names.sort()

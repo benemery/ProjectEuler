@@ -5,7 +5,7 @@ def test():
 
 def main():
     # python makes this pretty easy..
-    return str(sum(nums))[:10]
+    return int(str(sum(nums))[:10])
 
 nums = [
 37107287533902102798797998220837590246510135740250,

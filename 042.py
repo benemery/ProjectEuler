@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import gen_triangular
+from toolbox import gen_triangular, get_data
 
 def convert_string_to_int(a_string):
     ''' Integer representation of a given string '''
@@ -12,13 +12,13 @@ def main():
     # Read the file of words, converting them to their number version
     string_number_pairs = []
     numbers_to_test = set()
-    with open('042_words.txt') as words_file:
-        data = words_file.read()
-        for word in data.replace('"',"").lower().split(','):
-            string_as_int = convert_string_to_int(word)
+    data = get_data('042_words.txt')
 
-            string_number_pairs.append((word, string_as_int))
-            numbers_to_test.add(string_as_int)
+    for word in data.replace('"',"").lower().split(','):
+        string_as_int = convert_string_to_int(word)
+
+        string_number_pairs.append((word, string_as_int))
+        numbers_to_test.add(string_as_int)
 
     # Now we have our unique set of numbers to test, find all the tringular
     # numbers up to the max and compare
