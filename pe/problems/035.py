@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import is_cyclic_prime
+from pe.toolbox import is_cyclic_prime
 
 def number_of_cyclic_primes_below_n(n):
     if n < 2:

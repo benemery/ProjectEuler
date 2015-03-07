@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import largest_prime_divisor
+from pe.toolbox import largest_prime_divisor
 
 def test():
     return largest_prime_divisor(13195) == 29

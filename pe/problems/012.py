@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import gen_triangular, factors
+from pe.toolbox import gen_triangular, factors
 
 def triangular_with_more_than_n_divisors(n):
     for t in gen_triangular():

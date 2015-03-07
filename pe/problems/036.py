@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import is_palindrome
+from pe.toolbox import is_palindrome
 
 def is_palindromic_in_2_bases(n):
     """ is n a palindrome in base 10 and base 2? """

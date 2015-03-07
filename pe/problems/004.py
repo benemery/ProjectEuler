@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import is_palindrome
+from pe.toolbox import is_palindrome
 
 def largest_palindrome(num_digits):
     ans = -1

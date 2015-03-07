@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import fib
+from pe.toolbox import fib
 from itertools import takewhile
 
 def test():

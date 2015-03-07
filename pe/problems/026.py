@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import is_prime
+from pe.toolbox import is_prime
 
 def longest_cycle(n):
     ''' We only need to test primes as any other composite will have the same

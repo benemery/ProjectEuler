@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import factors
+from pe.toolbox import factors
 
 def test():
     return True

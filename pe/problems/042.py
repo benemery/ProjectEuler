@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import gen_triangular, get_data
+from pe.toolbox import gen_triangular, get_data
 
 def convert_string_to_int(a_string):
     ''' Integer representation of a given string '''

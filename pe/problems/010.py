@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import gen_primes
+from pe.toolbox import gen_primes
 
 def sum_primes_below(n):
     total = 0

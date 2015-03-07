@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import fib
+from pe.toolbox import fib
 
 def does_power_match_length(i, n):
     """Does the interger i, when raised to the power n have n digits?"""

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import prime_factors
+from pe.toolbox import prime_factors
 from collections import defaultdict, Counter
 
 def lowset_common_multiple_for_range(x, y):

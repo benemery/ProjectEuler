@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import gen_primes
+from pe.toolbox import gen_primes
 
 def nth_prime(n):
     counter = 1

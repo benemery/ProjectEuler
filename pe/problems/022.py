@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import get_data
+from pe.toolbox import get_data
 
 def test():
     # Test is pretty poor

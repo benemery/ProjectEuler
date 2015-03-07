@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import proper_factors, factors
+from pe.toolbox import proper_factors, factors
 
 def d(n):
     return sum(proper_factors(n))

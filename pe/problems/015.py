@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from ProjectEuler.toolbox import nCr
+from pe.toolbox import nCr
 
 def lattice_paths(x, y):
     # we need to take x+y steps to reach one corner of the lattice to the other.

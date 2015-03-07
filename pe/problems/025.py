@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from toolbox import fib
+from pe.toolbox import fib
 
 def first_fib_of_length_n(n):
     for i, f in enumerate(fib()):

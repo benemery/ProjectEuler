@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from itertools import permutations
 
-from toolbox import is_pandigital
+from pe.toolbox import is_pandigital
 
 def test_for_crazy_properties(num):
     ''' Integer representation of a given string '''
