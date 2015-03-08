@@ -42,7 +42,8 @@ def totient_2(n):
     Where p is prime, then we know the totient to be
 
     phi(n)  = phi(p_1 * p_2 * p_3 * .. p_n)
-            = phi(p_1 - 1) * phi(p_2 - 1) * phi(p_3 - 1) * ... *  phi(p_n - 1)
+            = phi(p_1) * phi(p_2) * phi(p_3) * .. phi(p_n)
+            = (p_1 - 1) * (p_2 - 1) * (p_3 - 1) * ... *  (p_n - 1)
     """
     factors = prime_factors(n)
     totients = ((p - 1) * p ** (exponent - 1) for p, exponent in factors)
