@@ -1,6 +1,5 @@
 """Any prime number based funcionality lives in here."""
 
-@profile
 def prime_factors(n):
     """Find all the prime factors of a `n`.
 
