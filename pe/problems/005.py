@@ -18,10 +18,10 @@ def lowset_common_multiple_for_range(x, y):
     highest_prime_divisors = defaultdict(int)  # hold the highest power for a prime divisor (so for 2,4,8, this would hold 2^3)
 
     for n in range(x, y + 1):
-        primes = Counter(prime_factors(n))
-        for prime, power in primes.iteritems():
-            if highest_prime_divisors[prime] < pow(prime, power):
-                highest_prime_divisors[prime] = pow(prime, power)
+        for prime, expo in prime_factors(n):
+            factor = pow(prime, expo)
+            if highest_prime_divisors[prime] < factor:
+                highest_prime_divisors[prime] = factor
 
     return reduce(lambda a, b: a*b, highest_prime_divisors.values())
 

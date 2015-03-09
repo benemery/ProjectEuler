@@ -1,5 +1,7 @@
 """Any prime number based funcionality lives in here."""
 
+from math import sqrt
+
 def prime_factors(n):
     """Find all the prime factors of a `n`.
 
@@ -110,3 +112,50 @@ def croft():
         else:
             roots[q*q] = q
             yield q
+
+
+def get_primes(n):
+    """ Helper function to get all the primes below n.
+        Fine if you're dealing with a low n, otherwise you may want to watch mem
+        usage.
+    """
+    primes = []
+    for p in gen_primes():
+        if p > n:
+            break
+        primes.append(p)
+    return primes
+
+def is_prime(n):
+    """ Test for primility.
+        Limit is set as such as the sqrt(n) is the largest divisor pair
+        (larger divisors will have partner below sqrt(n)).
+    """
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    lim = int(sqrt(n))+1
+    for i in xrange(3, lim, 2):   # only odd numbers
+        if n % i == 0:
+            return False
+    return True
+
+
+def is_cyclic_prime(n):
+    n = str(n)
+    # check if any digit is even, if so don't bother with anything else
+    for d in n:
+        if int(d) % 2 == 0:
+            return n == '2'
+
+    cycles = [[n[i - j] for i in range(len(n))] for j in range(len(n))]
+    # join the digits and convert to ints
+    cycles = map(lambda x: int(''.join(x)), cycles)
+    for p in cycles:
+        if not is_prime(p):
+            return False
+    return True
